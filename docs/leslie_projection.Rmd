@@ -43,16 +43,16 @@ Add line-by-line comments wheres prompted in the code below, explaining what eac
 # ------ WHAT HAPPENS HERE? ------ #
 # ------ comment line-by-line ---- #
 
-# The line below...
+# The line below creates a vector of the time period of 8 years over 1 year increments  
 time_yr <- seq(from = 0, to = 8, by = 1)
 
-# The line below...
+# The line below creates an empty matrix that will hold the output of the for loop. 
 proj_year <- matrix(ncol = length(fish_year0), nrow = length(time_yr))
 
-# The line below...
+# The line below populates the first row of the matrix above with the initial conditions provided 
 proj_year[1, ] <- fish_year0
 
-# The for loop below...
+# The for loop below starts at row 2, and executes the leslie matrix multiplication on the previous conditions 
 for (i in 2:length(time_yr)) {
   proj_year[i,] <- fish_leslie %*% proj_year[i-1,]
 }
