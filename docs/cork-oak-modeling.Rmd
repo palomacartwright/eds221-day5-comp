@@ -1,0 +1,21 @@
+---
+title: "Cork Oak Modeling"
+author: "Paloma Cartwright"
+date: "13/08/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(here)
+source(here::here("src", "cork_oak_growth.R"))
+```
+
+The height of this cork oak at age 12 is expected to be `r height_t2(height_t1 = 10, t1 = 6, t2 = 8)` ft. 
+
+```{r}
+
+height_t2(height_t1 = 25, t1 = 4, t2 = 10)
+
+```
+
